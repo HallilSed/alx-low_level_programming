@@ -8,14 +8,15 @@
  */
 int main(void)
 {
-	char lowerq = 'a';
+	char lowerq;
 
-	e = 'e';
-	q = 'q';
-	for (lowerq = 'a'; lowerq <= 'z'; lower++)
+	char e = 'e';
+	char q = 'q';
+
+	for (lowerq = 'a'; lowerq <= 'z'; lowerq++)
 	{
-	if (low != e && low != q)
-	putchar(low);
+	if (lowerq != q && lowerq != e)
+	putchar(lowerq);
 	}
 	putchar('\n');
 	return (0);
