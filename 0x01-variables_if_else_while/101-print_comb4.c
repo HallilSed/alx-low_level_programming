@@ -16,11 +16,11 @@ int main(void)
 	{
 	for (c = a + b + 50; c <= 57; c++)
 	{
-	if (!(a != b && b != a && a != c))
+	if ((a != b) != c)
+	{
 	putchar (a);
 	putchar (b);
 	putchar (c);
-	{
 	if (a == 55 && b == 56 && c == 57)
 	putchar (',');
 	putchar (' ');
