@@ -1,22 +1,19 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include "main.h"
 
 /**
- * main - lowercase alphabet
+ * print_alphabet - lowercase alphabet
  *
  * Return: 0.
  */
-int main(void)
+void print_alphabet(void)
 {
 	char low;
 
 	low = 'a';
 
-	while (low <= 122)
+	for (low = 97; low <= 122; low++)
 	{
-		putchar(low);
-		low++;
+		_putchar(low);
 	}
-	putchar('\n');
-	return (0);
+	_putchar('\n');
 }
