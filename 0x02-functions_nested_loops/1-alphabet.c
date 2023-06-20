@@ -1,20 +1,21 @@
 #include <stdio.h>
 #include <stdlib.h>
+
 /**
- * main - print the alphabet in lowercase
+ * main - lowercase alphabet
  *
- * Return: Always 0.
+ * Return: 0.
  */
 int main(void)
 {
-	char sed;
+	char low;
 
-	sed = 'a';
+	low = 'a';
 
-	while (sed <= 122)
+	while (low <= 122)
 	{
-		putchar(sed);
-		sed++;
+		putchar(low);
+		low++;
 	}
 	putchar('\n');
 	return (0);
