@@ -6,33 +6,28 @@
  */
 char *cap_string(char *s)
 {
-	int counting_string;
+	int count;
 
-/* scan through string */
-	counting_string = 0;
-	while (s[counting_string] != '\0')
-	{
-		/* if next character after count is a char, capitalise it */
+	/* scan through string */
+	count = 0;
+	while (s[count] != '\0')
+	{/* if next character after count is a char, capitalize it */
 		if (s[0] >= 97 && s[0] <= 122)
 		{
 			s[0] = s[0] - 32;
 		}
-		if (s[counting_string] == ' ' || s[counting_string] == '\t'
-			|| s[counting_string] == '\n'
-			|| s[counting_string] == ','
-			|| s[counting_string] == ';' || s[counting_string] == '.'
-			|| s[counting_string] == '.'
-			|| s[counting_string] == '!' || s[counting_string] == '?'
-			|| s[counting_string] == '"'
-			|| s[counting_string] == '(' || s[counting_string] == ')'
-			|| s[counting_string] == '{' || s[counting_string] == '}')
-			{
-		if (s[counting_string + 1] >= 97 && s[counting_string + 1] <= 122)
+		if (s[count] == ' ' || s[count] == '\t' || s[count] == '\n'
+				|| s[count] == ',' || s[count] == ';' || s[count] == '.'
+				|| s[count] == '.' || s[count] == '!' || s[count] == '?'
+				|| s[count] == '"' || s[count] == '(' || s[count] == ')'
+				|| s[count] == '{' || s[count] == '}')
 		{
-			s[counting_string + 1] = s[counting_string] - 32;
+			if (s[count + 1] >= 97 && s[count + 1] <= 122)
+			{
+				s[count + 1] = s[count + 1] - 32;
+			}
 		}
-		}
-		counting_string++;
+		count++;
 	}
 	return (s);
 }
